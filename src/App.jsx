@@ -20,15 +20,19 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{display:"flex"}} >
+      <div>
+        <label> movie or serie </label>
+      <input type="text" onChange={(e)=>setname(e.target.value)} />
+      </div>
       
       <table>
-      <input type="text" onChange={(e)=>setname(e.target.value)} />
+      
         <thead>
-          {info.map((elm,index)=>(elm.title?<tr key={index} ><button onClick={()=>setid(elm.id)}>{elm.title}</button></tr>:null))}
+          {info.map((elm,index)=>(<tr key={index} ><button onClick={()=>(setid(elm.id),elm.title?settype('movie'):settype('tv'))}>{elm.title?elm.title:elm.name}</button></tr>))}
         </thead>
       </table>
-      <iframe src={`https://vidsrc.to/embed/movie/${id}`} width="1000px" height="500px" frameborder="0"></iframe>
+      <iframe src={`https://vidsrc.to/embed/${type}/${id}`} width="1000px" height="500px" frameborder="0"></iframe>
     </div>
   )
   
