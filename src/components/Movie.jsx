@@ -69,7 +69,8 @@ export default function Watch(props) {
     console.log(arrayy.length)
   }
 
-  return type == "tv" ? (<Link to='/'><h3>Back</h3></Link>   <div style={{ height: "50vh", width: "50vh" }}>
+  return type == "tv" ? (<div style={{ height: "50vh", width: "50vh" }}>
+<Link to="/"><button>Back</button></Link>
         {seasons.map((elm) =>
           elm.episode_count > 0 && elm.name != "Specials" ? (
             <button onClick={()=>handlechange(elm)}>
