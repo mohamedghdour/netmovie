@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 
 export default function Watch(props) {
   const { id } = useParams();
@@ -69,8 +69,7 @@ export default function Watch(props) {
     console.log(arrayy.length)
   }
 
-  return type == "tv" ? (
-    <div style={{ height: "50vh", width: "50vh" }}>
+  return type == "tv" ? (<Link to='/'><h3><h3/></Link>   <div style={{ height: "50vh", width: "50vh" }}>
         {seasons.map((elm) =>
           elm.episode_count > 0 && elm.name != "Specials" ? (
             <button onClick={()=>handlechange(elm)}>
