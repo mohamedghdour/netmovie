@@ -33,7 +33,7 @@ export default function Watch(props) {
   }, []); // Run this effect only once when the component mounts
 
   return (
-    <div style={{ height: '100vh', width: "100vh" }}>
+    <div style={{ height: '50vh', width: "50vh" }}>
       <iframe
         id="videoFrame"
         referrerpolicy="origin"

@@ -35,12 +35,10 @@ export default function Search(){
 	<span class="caret"></span>
     <div className="grid-container">
         {info.map((elm) =>
-          elm.poster_path ? (
-              <div ><Link to={`/watch/${elm.title?"movie":'tv'}/${elm.id}`} ><img 
+          elm.poster_path ? (<Link to={`/watch/${elm.title?"movie":'tv'}/${elm.id}`} ><img 
               style={{ borderRadius: "10px" }}
               src={`https://image.tmdb.org/t/p/w220_and_h330_face/${elm.poster_path}`}
-            /></Link><h4>{elm.title?elm.title:elm.name}</h4></div>
-          ) : null
+            /></Link>) : null
         )}
       </div>
 
