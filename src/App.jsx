@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Search />} />
         <Route path={`/watch/:type/:id`} element={<Watch />} />
+        
         {/* Add more routes as needed */}
       </Routes>
   );

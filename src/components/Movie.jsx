@@ -38,7 +38,7 @@ export default function Watch(props) {
         id="videoFrame"
         referrerpolicy="origin"
         style={{ height: '100%', width: '100%', border: 'none' }}
-        src={`https://vidsrc.net/embed/${type}/${id}`}
+        src={`https://vidsrc.pro/embed/${type}/${id}`}
         title="video-frame"
         allowFullScreen
       ></iframe>
